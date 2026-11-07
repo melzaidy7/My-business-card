@@ -133,32 +133,6 @@
         .social-btn:hover { background: rgba(212, 175, 55, 0.2); border-color: #ffd700; transform: translateY(-2px); }
         .email-link { color: #f3e5ab; text-decoration: none; font-weight: 600; transition: all 0.2s ease; }
         .email-link:hover { color: #ffffff; text-decoration: underline; }
-        
-        /* تنسيق حاوية الباركود المباشرة */
-        #qr-container {
-            display: none;
-            margin-top: 8px;
-            margin-bottom: 8px;
-            background: rgba(212, 175, 55, 0.06);
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-        }
-        .qrcode-box {
-            background: #ffffff;
-            padding: 6px;
-            border-radius: 8px;
-            display: inline-block;
-            margin: 0 auto;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-        .qrcode-box img {
-            display: block;
-            width: 125px;
-            height: 125px;
-            margin: 0 auto;
-        }
 
         @media (max-width: 480px) {
             .container { padding: 18px 14px; border-radius: 16px; }
@@ -186,15 +160,13 @@
 
         <!-- Work Information -->
         <div class="contact-section">
-            <p class="contact-title">🇪🇬 مصر | Egypt</p>
             <div class="info-item">
-                <span class="info-label">وزارة الزراعة وإستصلاح الأراضي</span><br>
+                <span class="info-label">وزارة الزراعة وإستصلاح الأراضي 🇪🇬 مصر | Egypt</span><br>
                 Ministry of Agriculture and Land Reclamation
             </div>
             
-            <p class="contact-title" style="margin-top: 8px;">🇸🇦 المملكة العربية السعودية | Saudi Arabia</p>
             <div class="info-item">
-                <span class="info-label">جامعة الملك سعود</span><br>
+                <span class="info-label">جامعة الملك سعود 🇸🇦 السعودية | Saudi Arabia </span><br>
                 College of Science, King Saud University | P.O. Box 2455, Riyadh 11451
             </div>
         </div>
@@ -243,19 +215,6 @@
             </a>
         </div>
 
-        <!-- QR Code Toggle Button and Container -->
-        <div style="margin-bottom: 8px;">
-            <button onclick="toggleQRCode()" class="action-btn" style="width: 100%;">
-                <span>📷</span> إظهار / إخفاء الباركود
-            </button>
-            <div id="qr-container">
-                <div class="qrcode-box">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://melzaidy7.github.io/My-business-card/" alt="QR Code">
-                </div>
-                <p style="font-size: 10.5px; color: #ffd700; margin-top: 6px; font-weight: bold;">امسح الكود لفتح البطاقة</p>
-            </div>
-        </div>
-
         <!-- Primary Action Button - Save Contact -->
         <button onclick="downloadVCard()" class="action-btn primary-btn">
             <span>➕</span> احفظ جهة الاتصال
@@ -263,15 +222,6 @@
     </div>
 
     <script>
-        function toggleQRCode() {
-            const qrContainer = document.getElementById('qr-container');
-            if (qrContainer.style.display === 'none' || qrContainer.style.display === '') {
-                qrContainer.style.display = 'block';
-            } else {
-                qrContainer.style.display = 'none';
-            }
-        }
-
         function downloadVCard() {
             const vcardData = `BEGIN:VCARD
 VERSION:3.0
